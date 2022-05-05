@@ -4,9 +4,9 @@ import { addTimeLogToEmployee } from '../db/timelog';
 
 const router = Router();
 
-router.post('/employees/:employeeId/timelogs', async (req: Request, res: Response) => {
-    const timelog = await addTimeLogToEmployee(req.params.employeeId, req.body);
-    res.send("Hej");
+router.post('/departments/:departmentId/employees/:employeeId/timelogs', async (req: Request, res: Response) => {
+    const timeLog = await addTimeLogToEmployee(req.params.departmentId, req.params.employeeId, req.body);
+    res.json(timeLog);
 })
 
 export default router;

@@ -18,10 +18,10 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost:4000/employees/62738b147b7b5d402631733c/timelogs
+POST http://localhost:4000/departments/62738880ee862127ef1ce9a2/employees/62738b147b7b5d402631733c/timelogs
 Content-Type: application/json
 
 {
-    "start": "2021-01-01 13:00",
-    "end": "2021-01-01 14:00" 
+    "start": "2021-01-01 15:00",
+    "end": "2021-01-01 16:00" 
 }

@@ -11,5 +11,5 @@ export const getDepartmentById = () => {
 }
 
 export const getDepartments = () => {
-    
+    return DepartmentModel.find();
 }

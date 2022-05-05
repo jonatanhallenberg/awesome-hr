@@ -1,6 +1,7 @@
 import { Schema, model } from 'mongoose';
 
 export interface IEmployee {
+    _id?: string,
     firstname: string,
     lastname: string,
     timelogs: any[]

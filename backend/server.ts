@@ -2,9 +2,13 @@ import express, { Request, Response, json } from 'express';
 import { connect } from 'mongoose';
 import departmentRouter from './routes/departmentRouter';
 import employeeRouter from './routes/employeeRouter';
+import cors from 'cors';
 
 const app = express();
 app.use(json());
+app.use(cors({
+    origin: "http://localhost:3000"
+}));
 
 app.use(departmentRouter);
 app.use(employeeRouter);
