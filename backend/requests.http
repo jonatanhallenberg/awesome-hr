@@ -1,0 +1,18 @@
+GET http://localhost:4000
+###
+POST http://localhost:4000/departments
+Content-Type: application/json
+
+{
+    "name": "IT"
+}
+###
+GET http://localhost:4000/departments
+###
+POST http://localhost:4000/departments/???/employees
+Content-Type: application/json
+
+{
+    "firstname": "Jonatan",
+    "lastname": "Hallenberg"
+}
