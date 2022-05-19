@@ -80,10 +80,22 @@ git push heroku master
 ### Env-variabel för api-url
 
 1. Skapa en .env-fil och lägg till en env-variabel som heter REACT_APP_API_BASE_URL och innehåller http://localhost:xxxx
-2. Ändra alla fetch-url:er som börjar med http://localhost:xxxx till att läsa in env-variabel:
+2. Ändra alla fetch-url:er som börjar med http://localhost:xxxx till att läsa in env-variabel:  
 
 ```tsx
 const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/departments`);
 ```
 3. Lägg till samma environment-variabel i Netlify under appen->Site Settings->Build and Deploy->Environment men med hostnamnet för ditt api på Heroku (t.ex. https://awesome-hr.herokuapp.com/)
 
+## Cors i backend
+
+- Se till att du använder cors i backend:
+
+```sh
+npm i cors
+```
+
+```ts
+import cors from 'cors';
+app.use(cors())
+```
