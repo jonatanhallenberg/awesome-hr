@@ -58,3 +58,21 @@ if (process.env.MONGO_DB_CONNECTION_STRING) {
 ```sh
 heroku config:set MONGO_DB_CONNECTION_STRING="mongodb+srv://ithsdb:Z45hs9BcuzzIm7kb@cluster0.7fzvg.mongodb.net/awesome-hr?retryWrites=true&w=majority"
 ```
+
+5. Committa ändringarna till Git
+
+6. Pusha till heroku
+
+```sh
+git push heroku master
+```
+
+## Frontend
+
+1. Skapa konto på Netlify
+2. Välj under Sites -> Import from Git
+3. Välj repository
+4. Ange:
+  - Base directory (katalogen där frontend-koden ligger, t.ex. client, frontend eller liknande)
+  - Build command: npm run build
+  - Publish directory: skriv in *build*
