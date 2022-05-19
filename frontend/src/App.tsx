@@ -9,7 +9,7 @@ const App = () => {
   useEffect(() => {
 
     const loadDepartments = async () => {
-      const res = await fetch('http://localhost:4000/departments');
+      const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/departments`);
       const departments = await res.json();
       console.log(departments);
       setDepartments(departments);
