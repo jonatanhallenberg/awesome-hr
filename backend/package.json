@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.ts",
+    "start-dev": "nodemon server.ts",
+    "start": "ts-node server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -16,10 +17,10 @@
     "express": "^4.18.1",
     "mongoose": "^6.3.2",
     "ts-node": "^10.7.0",
-    "typescript": "^4.6.4"
+    "typescript": "^4.6.4",
+    "@types/cors": "^2.8.12"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.12",
     "nodemon": "^2.0.16"
   }
 }

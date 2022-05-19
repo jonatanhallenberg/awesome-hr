@@ -13,10 +13,10 @@ app.use(cors({
 app.use(departmentRouter);
 app.use(employeeRouter);
 
-const port = 4000
+const port = process.env.PORT || 4000
 
 app.get('/', (req, res) => res.send('Hello world!'));
 
-connect('mongodb://localhost:27017/awesomehr').then(() => {
-    app.listen(port, () => console.log('listing'));
+connect('mongodb+srv://ithsdb:Z45hs9BcuzzIm7kb@cluster0.7fzvg.mongodb.net/awesome-hr?retryWrites=true&w=majority').then(() => {
+    app.listen(port, () => console.log('listening to port: ' + port));
 })
